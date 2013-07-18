@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent" android:background="#ededed">
+    <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:textSize="25sp" android:background="@drawable/newcar_bg" android:height="50dip" android:gravity="center" android:textColor="#000000" android:id="@+id/breaktext" android:text="运西岗"></TextView>
+    <TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:textAppearance="?android:attr/textAppearanceSmall" android:layout_gravity="right" android:textColor="#000000" android:id="@+id/breaktime" android:paddingRight="3dip"></TextView>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="#000000" android:id="@+id/breakdetail" android:textAppearance="?android:attr/textAppearanceSmall" android:paddingLeft="3dip" android:drawableBottom="@drawable/qw" android:text="klkjhklhlkjl"></TextView>
+    <LinearLayout android:visibility="visible" android:id="@+id/picwait" android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:background="#707070" android:paddingLeft="3dip" android:layout_weight="0">
+        <ProgressBar android:layout_width="wrap_content" style="?android:attr/progressBarStyleSmall" android:layout_height="wrap_content" android:id="@+id/progressBar1"></ProgressBar>
+        <TextView android:textAppearance="?android:attr/textAppearanceSmall" android:text="违章图片载入中..." android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/textView1" android:paddingLeft="3dip"></TextView>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:gravity="top" android:layout_height="wrap_content" android:layout_width="fill_parent" android:layout_gravity="center" android:paddingTop="3dip" android:layout_weight="1" android:id="@+id/picshow">
+        <ImageSwitcher android:layout_width="fill_parent" android:id="@+id/imageSwitcher1" android:layout_weight="1" android:layout_gravity="fill_horizontal" android:layout_height="200dp"></ImageSwitcher>
+        <Gallery android:layout_height="wrap_content" android:layout_width="fill_parent" android:id="@+id/mygallery" android:layout_weight="0" android:layout_gravity="bottom"></Gallery>
+    </LinearLayout>
+    
+</LinearLayout>

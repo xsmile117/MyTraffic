@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent" android:layout_height="fill_parent" android:orientation="vertical" android:background="#ededed">
+  <TextView android:layout_height="wrap_content" android:layout_width="fill_parent" android:height="50dip" android:background="@drawable/newcar_bg" android:id="@+id/newvehicle" android:textColor="#000000" android:gravity="center" android:text="机动车信息" android:textSize="25sp"></TextView>
+  <LinearLayout android:orientation="horizontal" android:layout_height="wrap_content" android:id="@+id/LinearLayout02" android:layout_width="fill_parent" android:gravity="center" android:paddingTop="6dip">
+      <TextView android:layout_width="wrap_content" android:textAppearance="?android:attr/textAppearanceMedium" android:textSize="20sp" android:textColor="#000000" android:layout_height="wrap_content" android:paddingLeft="6dip" android:id="@+id/TextView02" android:text="车辆类型："></TextView>
+      <Spinner android:id="@+id/Spinner02" android:layout_weight="1" android:layout_height="wrap_content" android:layout_width="fill_parent" android:prompt="@string/planet_prompt"></Spinner>
+  </LinearLayout>
+  <LinearLayout android:orientation="horizontal" android:layout_height="wrap_content" android:id="@+id/LinearLayout01" android:layout_width="fill_parent" android:gravity="center">
+      <TextView android:layout_width="wrap_content" android:textAppearance="?android:attr/textAppearanceMedium" android:textSize="20sp" android:textColor="#000000" android:layout_height="wrap_content" android:paddingLeft="6dip" android:id="@+id/TextView01" android:text="车牌号码：苏K"></TextView>
+      <EditText android:layout_width="wrap_content" android:layout_weight="1" android:layout_height="wrap_content" android:id="@+id/editText1" android:selectAllOnFocus="true" android:maxLength="5" android:digits="0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz">
+          <requestFocus></requestFocus>
+      </EditText>
+  </LinearLayout>
+  <LinearLayout android:layout_height="wrap_content" android:id="@+id/linearLayout1" android:layout_width="fill_parent" android:orientation="horizontal" android:gravity="center">
+      <TextView android:layout_width="wrap_content" android:textAppearance="?android:attr/textAppearanceMedium" android:layout_height="wrap_content" android:id="@+id/vehicletype" android:textColor="#000000" android:textSize="20sp" android:paddingLeft="6dip" android:text="验证码："></TextView>
+      <EditText android:layout_width="wrap_content" android:layout_weight="1" android:layout_height="wrap_content" android:id="@+id/editText2" android:hint="车辆识别代码后6位" android:maxLength="6" android:digits="0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"></EditText>
+  </LinearLayout>
+  <LinearLayout android:orientation="horizontal" android:layout_height="wrap_content" android:id="@+id/LinearLayout03" android:layout_width="fill_parent" android:gravity="center">
+      <CheckBox android:id="@+id/checkBox1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true"></CheckBox>
+      <TextView android:layout_width="wrap_content" android:textAppearance="?android:attr/textAppearanceMedium" android:textSize="20sp" android:textColor="#000000" android:layout_height="wrap_content" android:paddingLeft="6dip" android:id="@+id/TextView03" android:layout_weight="1" android:text="保存车辆信息"></TextView>
+  </LinearLayout>
+  <TextView android:id="@+id/textView1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/note" android:layout_weight="1" android:paddingLeft="6dip"></TextView>
+  <Button android:layout_height="wrap_content" android:gravity="center" android:layout_width="fill_parent" android:height="50dip" android:textSize="25sp" android:text="违章查询" android:background="@drawable/checkdatebg_select" android:id="@+id/newcheck_button"></Button>
+      
+</LinearLayout>

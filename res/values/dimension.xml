@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="Item_Height">79dp</dimen>
+    <dimen name="Item_Width">100dp</dimen>
+    
+</resources>

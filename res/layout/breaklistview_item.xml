@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent" android:paddingLeft="6dip" android:minHeight="?android:attr/listPreferredItemHeight" android:paddingTop="3dip">
+    <LinearLayout android:layout_height="wrap_content" android:layout_width="fill_parent" android:id="@+id/linearLayout1" android:gravity="center" android:paddingRight="6dip" android:paddingTop="3dip">
+        <TextView android:layout_height="wrap_content" android:text="闭路电视" android:layout_width="wrap_content" android:layout_weight="1" android:singleLine="true" android:id="@+id/monitortype" android:textColor="#a1a1a1" android:textAppearance="?android:attr/textAppearanceSmall"></TextView>
+        <ImageView android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/imageView1" android:src="@drawable/money" android:paddingRight="3dip"></ImageView>
+        <TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="100" android:paddingRight="3dip" android:id="@+id/breakmoney" android:textColor="#a1a1a1" android:textAppearance="?android:attr/textAppearanceSmall"></TextView>
+        <ImageView android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/imageView2" android:src="@drawable/score" android:paddingRight="3dip"></ImageView>
+        <TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="3" android:id="@+id/breakscore" android:textColor="#a1a1a1" android:textAppearance="?android:attr/textAppearanceSmall"></TextView>
+    </LinearLayout>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="#000000" android:id="@+id/breaksummary" android:paddingTop="3dip" android:textAppearance="?android:attr/textAppearanceMedium" android:text="四季园菜场（南门）违反禁令标志指示"></TextView>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="2011-05-10 09:05:13" android:layout_gravity="right" android:textAppearance="?android:attr/textAppearanceSmall" android:paddingRight="6dip" android:id="@+id/breaktime" android:paddingTop="3dip" android:textColor="#a1a1a1"></TextView>
+    
+</LinearLayout>

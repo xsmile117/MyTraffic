@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">扬州交通违章查询</string>
+    <string name="planet_prompt">选择车辆类型</string> 
+	<string-array name="vehicleType_arry"> 
+        <item>大型汽车号牌</item>
+        <item>小型汽车号牌</item> 
+        <item>使馆汽车号牌</item> 
+        <item>领馆汽车号牌</item> 
+        <item>境外汽车号牌</item>
+        <item>外籍汽车号牌</item>
+        <item>两、三轮摩托车号牌</item>  
+        <item>轻便摩托车号牌</item>  
+        <item>使馆摩托车号牌</item>  
+        <item>领馆摩托车号牌</item>  
+        <item>境外摩托车号牌</item>  
+        <item>外籍摩托车号牌</item>  
+        <item>农用运输车号牌</item>  
+        <item>拖拉机号牌</item>  
+        <item>挂车号牌</item>  
+        <item>教练汽车号牌</item>  
+        <item>教练摩托车号牌</item>  
+        <item>试验汽车号牌</item>  
+        <item>试验摩托车号牌</item>  
+        <item>临时入境汽车号牌</item>  
+        <item>临时入境摩托车号牌</item>  
+        <item>临时行驶车号牌</item>  
+        <item>警用汽车号牌</item>  
+        <item>警用摩托号牌</item> 
+    </string-array>
+    <string name="note">说明：违章数据来源为扬州机动车曝光查询网站</string> 
+	<string name="about_content">Android手机平台扬州交通违章查询软件V1.9.6\n
+	版本特性：\n
+	1、违章图片手势缩放查看\n
+	2、违章图片保存（SD卡）\n
+	3、后台自动查询，新违章自动提醒\n
+	4、违章信息发送\n
+	违章数据来源为扬州机动车违法曝光查询网站，本软件仅提供查询功能。\n
+	有关本软件的任何问题请与我联系。\n	
+	作者:	xsmile\n
+	电子邮箱:xsmile117@gmail.com
+	</string>    
+    <string name="info_content">查询说明:\n
+1、本软件数据来源为扬州机动车道路交通违法信息查询网站。\n	
+2、本查询仅供参考，实际情况以交管部门窗口数据为准。\n
+3、本查询仅提供机动车违法曝光未处罚数据。 \n
+4、由于数据传输原因，本查询将滞后实际情况二周左右时间。\n 
+处理指南:\n
+1、违法曝光不接受处罚将影响车辆正常审验。\n
+2、扬州籍车辆的违法曝光请到市公安局交巡警支队相关业务窗口或违法发生地交管部门接受处罚。\n
+3、违法地点为"高速公路"的违法曝光请到任一高速公路大队接受处罚。\n</string>        
+	
+</resources>
