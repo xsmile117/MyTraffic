@@ -8,6 +8,8 @@ import org.jsoup.nodes.Element;
 import org.jsoup.safety.Whitelist;
 import org.jsoup.select.Elements;
 
+import android.util.Log;
+
 
 public class HandleHtml {
 	private String info;
@@ -28,9 +30,9 @@ public class HandleHtml {
 		return breaks;
 	}
 
-	public String getInfo() {
-		return info;
-	}
+	//public String getInfo() {
+		//return info;
+	//}
 	
 	public int getAllMoney() {
 		return allMoney;
@@ -111,28 +113,32 @@ public class HandleHtml {
     	
     			}
     			
-    			return 1;
+    			return ReturnCode.CHECK_HAS_RECORD;
     		}else{
     			info=doc.select("[height=100%]").first().text();
     			if(info!=null){
     				//判断提示语
     				String word=info.substring(9);//取提示语第10个字母
     				if(word.startsWith("交")){
-    					return 0;//无违章
+    					MyApplication.getInstance().setInfomation(info);
+    					return ReturnCode.CHECK_NO_RECORD;//无违章
     				}else{
-    					return -1;//信息有误
+    					MyApplication.getInstance().setInfomation(info);
+    					return ReturnCode.CHECK_KEY_ERROR;//信息有误
     				}
     				
     			}else{
-    				info=ERROR_HTML;
-    				return 2;
+    				MyApplication.getInstance().setInfomation(ERROR_HTML);
+    				return ReturnCode.CHECK_HTML_ERROR;
     			}
     		}
     	}
     	catch(Exception e){
     		e.printStackTrace();
-    		info=ERROR_INFO;
-    		return 2;
+    		//Log.i("wrong",info);
+    		MyApplication.getInstance().setInfomation(ERROR_INFO);
+    		Log.i("wrong",info);
+    		return ReturnCode.CHECK_HTML_ERROR;
     	}
 	
 	}
@@ -167,13 +173,13 @@ public class HandleHtml {
 	    		allScore+=Integer.parseInt(tscore);
 	    		return 1;
     		}else{
-    			info=ERROR_HTML;
+    			MyApplication.getInstance().setInfomation(ERROR_HTML);
     			return 0;
     		}
     	}
     	catch(Exception e){
     		e.printStackTrace();
-    		info=ERROR_INFO;
+    		MyApplication.getInstance().setInfomation(ERROR_INFO);
     		return 2;
     	}
 	}
@@ -198,7 +204,7 @@ public class HandleHtml {
 		}
 		catch(Exception e){
 			e.printStackTrace();
-			info=ERROR_INFO;
+			MyApplication.getInstance().setInfomation(ERROR_INFO);
 			return -2;
 		}
 	}

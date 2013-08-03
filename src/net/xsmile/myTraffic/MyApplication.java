@@ -19,6 +19,7 @@ public class MyApplication extends Application {
 	 */
 
 	public MyApplication(){
+		infomation="Êý¾ÝÒì³£";
 		checkCorrect=false;
 		lastBreakDate="1900-1-1 00:00:00";
 		lastCheckDate="1900-1-1";
@@ -49,6 +50,7 @@ public class MyApplication extends Application {
 	private boolean checkCorrect;
 	private String lastBreakDate;
 	private String lastCheckDate;
+	private String infomation;
 	
 	
 
@@ -82,6 +84,14 @@ public class MyApplication extends Application {
 
 	public void setTempPics(Bitmap[] tempPics) {
 		this.tempPics = tempPics;
+	}
+
+	public String getInfomation() {
+		return infomation;
+	}
+
+	public void setInfomation(String infomation) {
+		this.infomation = infomation;
 	}
 
 

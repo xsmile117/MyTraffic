@@ -43,7 +43,7 @@ class CheckBreaksTask extends AsyncTask<Object, Void, Integer> {
 	List<VehicleBreak> myVehicleBreaks=new ArrayList<VehicleBreak>();
 	ArrayList<HashMap<String, String>> myBreakList = new ArrayList<HashMap<String, String>>(); 
 	HandleHtml handleHtml=new HandleHtml();
-	String info;
+	String info="";
 	
     // 后台执行的耗时任务，接收参数并返回结果
     // 当onPostExecute()执行完，在后台线程中被系统调用
@@ -67,6 +67,7 @@ class CheckBreaksTask extends AsyncTask<Object, Void, Integer> {
     				if((!isCancelled())&&(code==1)){
     					continue;
     				}else{
+    					info=MyApplication.getInstance().getInfomation();
     					return -1;
     				}
     			}
@@ -75,12 +76,16 @@ class CheckBreaksTask extends AsyncTask<Object, Void, Integer> {
     			handleHtml=operation.getHandleHtml();
     			return 1;
     		}else if((!isCancelled())&&(number==0)){
-    			info=operation.getInfo();
+    			info=MyApplication.getInstance().getInfomation();
     			return 0;
     		}else{
+    			info=MyApplication.getInstance().getInfomation();
+    			//Log.i("wrong",info);
     			return -1;
     		}
     	}else{
+    		info="网络不可用，请检查网络连接！";
+    		//Log.i("wrongwww",info);
     		return -1;
     		
     	}
@@ -141,7 +146,7 @@ class CheckBreaksTask extends AsyncTask<Object, Void, Integer> {
 						Calendar.getInstance().get(Calendar.DAY_OF_MONTH));
             	break;
             case -1:
-            	myView.setText("对方服务器错误，请稍后重试！");
+            	myView.setText(info);
             	break;
             }
     }

@@ -139,6 +139,7 @@ containing a value of this type.
         public static final int info_content=0x7f060004;
         public static final int note=0x7f060002;
         public static final int planet_prompt=0x7f060001;
+        public static final int soft_info=0x7f060005;
     }
     public static final class style {
         public static final int Transparent=0x7f080000;

@@ -48,8 +48,8 @@ public class MyHttpClient {
 			
 			ConnManagerParams.setMaxTotalConnections(params, 20);
 			ConnManagerParams.setTimeout(params, 10*1000);
-			HttpConnectionParams.setConnectionTimeout(params, 30*1000);
-			HttpConnectionParams.setSoTimeout(params, 60*1000);
+			HttpConnectionParams.setConnectionTimeout(params, 10*1000);
+			HttpConnectionParams.setSoTimeout(params, 10*1000);
 			
 			// Turn off stale checking. Our connections break all the time anyway,
 	        // and it's not worth it to pay the penalty of checking every time.

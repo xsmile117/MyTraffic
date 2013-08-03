@@ -29,7 +29,7 @@
         <item>警用摩托号牌</item> 
     </string-array>
     <string name="note">说明：违章数据来源为扬州机动车曝光查询网站</string> 
-	<string name="about_content">Android手机平台扬州交通违章查询软件V1.9.6\n
+	<string name="about_content">Android手机平台扬州交通违章查询软件V1.9.7\n
 	版本特性：\n
 	1、违章图片手势缩放查看\n
 	2、违章图片保存（SD卡）\n
@@ -48,6 +48,8 @@
 处理指南:\n
 1、违法曝光不接受处罚将影响车辆正常审验。\n
 2、扬州籍车辆的违法曝光请到市公安局交巡警支队相关业务窗口或违法发生地交管部门接受处罚。\n
-3、违法地点为"高速公路"的违法曝光请到任一高速公路大队接受处罚。\n</string>        
+3、违法地点为"高速公路"的违法曝光请到任一高速公路大队接受处罚。\n</string>
+    <string name="soft_info">Powered by xsmile   V1.9.7</string> 
+       
 	
 </resources>

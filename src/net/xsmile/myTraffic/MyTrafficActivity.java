@@ -7,6 +7,8 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
@@ -448,6 +450,19 @@ public class MyTrafficActivity extends Activity {
     	}
     	
     }
+    
+    
+    /*
+    private String getVersionName() throws Exception
+    {
+            // 获取packagemanager的实例
+            PackageManager packageManager = getPackageManager();
+            // getPackageName()是你当前类的包名，0代表是获取版本信息
+            PackageInfo packInfo = packageManager.getPackageInfo(getPackageName(),0);
+            String version = packInfo.versionName;
+            return version;
+    }
+    */
     
 	
 }
