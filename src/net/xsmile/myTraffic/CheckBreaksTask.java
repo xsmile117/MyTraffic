@@ -84,7 +84,7 @@ class CheckBreaksTask extends AsyncTask<Object, Void, Integer> {
     			return -1;
     		}
     	}else{
-    		info="网络不可用，请检查网络连接！";
+    		info="对方服务器错误，请稍后重试！";
     		//Log.i("wrongwww",info);
     		return -1;
     		

@@ -60,7 +60,7 @@ public class MyHttpClientCheck implements MyHttpClientAPI {
 	@Override
 	public String excuteHttpRequestForContent(HttpRequestBase httpRequest,Cookie myCookie,Boolean isCheck) {
 		HttpResponse hp=null;
-		String content=null;
+		String content="fail";
 		if(myCookie!=null){
 			myHttpClient.getCookieStore().addCookie(myCookie); 
 		}
@@ -82,6 +82,7 @@ public class MyHttpClientCheck implements MyHttpClientAPI {
 			Log.e(TAG, e.getMessage(), e);
 			e.printStackTrace();
 		} catch (IOException e) {
+			content="timeout";
 			Log.e(TAG, e.getMessage(), e);
 			e.printStackTrace();
 		}

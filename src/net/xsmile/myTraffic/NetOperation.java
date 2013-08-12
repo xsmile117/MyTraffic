@@ -60,19 +60,15 @@ public class NetOperation extends MyHttpClientCheck {
     	get=createHttpGet(URL_HOME);
         get.setHeader("referer", URL_REFERER);
        // result=EntityUtils.toString(excuteHttpRequest(get,null),"utf-8"); 
-        if(excuteHttpRequestForContent(get,null,true)!=null){
+        if(excuteHttpRequestForContent(get,null,true)=="succes"){
         	//myHttpClient.getCookieStore().getCookies().get(0);
         	get=new HttpGet(URL_HOME+"/module/outside/viewVehInfo.jsp");
-        	if(excuteHttpRequestForContent(get,null,true)!=null)  
+        	if(excuteHttpRequestForContent(get,null,true)=="succes")  
             	{ 
         			return NET_IS_READY;
             	}
         } 
         return NET_NOT_READY;
-       
-       
-        
-
     }
     
     

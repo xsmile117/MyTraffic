@@ -1,5 +1,6 @@
 package net.xsmile.myTraffic;
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 import android.app.Activity;
@@ -213,15 +214,9 @@ public class CheckVehicleActivity extends Activity implements OnDateSetListener{
 	    	//eCalendar.set(calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH)+1, calendar.get(Calendar.DAY_OF_MONTH));
 	    	
 	    	if(!checkVehicle.getLastCheckDate().equals("1900-1-1")){
-	    		if((calendar.get(Calendar.MONTH)+1)<4){
-	    			sTime=(calendar.get(Calendar.YEAR)-1)+"-"+ 
-	    			(calendar.get(Calendar.MONTH)+10)+"-"+ calendar.get(Calendar.DAY_OF_MONTH);
-	    			//sCalendar.set(calendar.get(Calendar.YEAR)-1, calendar.get(Calendar.MONTH)+10, calendar.get(Calendar.DAY_OF_MONTH));
-	    		}else{
-	    			sTime=(calendar.get(Calendar.YEAR))+"-"+ 
-	    			(calendar.get(Calendar.MONTH)-2)+"-"+ calendar.get(Calendar.DAY_OF_MONTH);
-	    			//sCalendar.set(calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH)-2, calendar.get(Calendar.DAY_OF_MONTH));
-	    		}
+	    		calendar.add(calendar.MONTH,-3);
+	    		sTime=(calendar.get(Calendar.YEAR))+"-"+ 
+	    			(calendar.get(Calendar.MONTH)+1)+"-"+ calendar.get(Calendar.DAY_OF_MONTH);		
 	    	}else{
 	    		
 	    		sTime=(calendar.get(Calendar.YEAR)-1)+"-1-1";
@@ -244,6 +239,24 @@ public class CheckVehicleActivity extends Activity implements OnDateSetListener{
     	
     	
     }
+    
+    /*
+    public static String MonthAdd(String currentDate,int day) {
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        Calendar calendar = Calendar.getInstance();
+        try {
+            calendar.setTime(sdf.parse(currentDate));
+        } catch (java.text.ParseException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        calendar.add(calendar.MONTH,day);//把日期往后增加一天.整数往后推,负数往前移动
+        return sdf.format(calendar.getTime());  //这个时间就是日期往后推一天的结果
+    }
+    */
+    
+    
+    
 
 	@Override
 	public void onDateSet(DatePicker arg0, int arg1, int arg2, int arg3) {
